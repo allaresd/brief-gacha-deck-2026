@@ -1,0 +1,6 @@
+{
+  "name": "Brief Gacha Deck",
+  "description": "An interactive gacha-style card drawing experience with unique card backs, flipping animations, and image saving capabilities.",
+  "requestFramePermissions": [],
+  "majorCapabilities": []
+}

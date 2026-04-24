@@ -1,0 +1,60 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Helvetica Neue", Arial, sans-serif;
+  --font-serif: "Cormorant Garamond", serif;
+}
+
+@layer base {
+  body {
+    @apply bg-[#050508] text-[#E2E2E2] min-h-screen overflow-y-auto;
+  }
+}
+
+@layer components {
+  .atmosphere {
+    @apply fixed inset-0 pointer-events-none;
+    background: radial-gradient(circle at 70% 50%, rgba(139, 92, 246, 0.08) 0%, transparent 60%);
+    filter: blur(80px);
+    z-index: -1;
+  }
+
+  @keyframes spin-slow {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+
+  .animate-spin-slow {
+    animation: spin-slow 8s linear infinite;
+  }
+
+  .deck-glow {
+    box-shadow: 0 0 80px rgba(139, 92, 246, 0.15);
+  }
+
+  .floating-action {
+    @apply backdrop-blur-md bg-white/5 border border-white/10 transition-all duration-300;
+  }
+
+  .card-perspective {
+    perspective: 1200px;
+  }
+
+  .card-inner {
+    @apply relative w-full h-full transition-transform duration-700;
+    transform-style: preserve-3d;
+  }
+
+  .card-face {
+    @apply absolute w-full h-full backface-hidden rounded-2xl shadow-xl flex flex-col;
+  }
+
+  .card-back {
+    @apply bg-[#0A0A10] border border-white/10 flex items-center justify-center p-2;
+  }
+
+  .card-front {
+    @apply bg-[#0A0A10] border border-white/20 p-6 shadow-[0_0_50px_rgba(255,255,255,0.05)];
+    transform: rotateY(180deg);
+  }
+}
