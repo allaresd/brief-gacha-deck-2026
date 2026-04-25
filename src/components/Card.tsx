@@ -28,11 +28,6 @@ export default function Card({ card, isFlipped, onClick, onSave, disabled }: Car
               className="w-full h-full object-cover opacity-60 grayscale group-hover:opacity-100 transition-all duration-700 group-hover:scale-105"
               referrerPolicy="no-referrer"
             />
-            <div className="absolute inset-0 flex items-center justify-center">
-               <div className="w-16 h-16 border border-white/10 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform bg-black/20 backdrop-blur-sm">
-                  <div className="w-8 h-8 bg-white/5 rounded-full" />
-               </div>
-            </div>
           </div>
         </div>
 
